@@ -1,0 +1,17 @@
+.container-input {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  padding: 20px;
+  color: rgb(100, 100, 100);
+}
+
+input {
+  padding: 10px;
+  width: 100%;
+}
+
+.container-input span {
+  color: rgb(194, 194, 194);
+  font-size: 14px;
+}

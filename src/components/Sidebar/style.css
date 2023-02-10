@@ -1,0 +1,27 @@
+.container-sidebar {
+  background-color: #ebebeb;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  color: rgb(47, 153, 182);
+  font-weight: 700;
+}
+
+.sidebar-content {
+  width: 70%;
+}
+
+.sidebar-content p,
+h3 {
+  padding: 8px 0;
+}
+
+.sidebar-content h3 {
+  border-bottom: 1px solid rgb(47, 153, 182);
+}
+
+@media screen and (min-width: 768px) {
+  .container-sidebar {
+    width: 30%;
+  }
+}
