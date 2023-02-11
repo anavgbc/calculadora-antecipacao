@@ -27,6 +27,17 @@ export const CalculatorContextProvider = ({ children }) => {
     }
   }, [amount, installments, mdr]);
 
+  const fixingValue = () => {
+    const values = Object.keys(result).map((item) =>
+      (result[item] / 100).toLocaleString("pt-BR", {
+        style: "currency",
+        currency: "BRL",
+      })
+    );
+    return values;
+  };
+
+  console.log(fixingValue());
   return (
     <CalculatorContext.Provider
       value={{
@@ -39,6 +50,7 @@ export const CalculatorContextProvider = ({ children }) => {
         days,
         setDays,
         result,
+        fixingValue,
       }}
     >
       {children}
