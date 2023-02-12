@@ -38,10 +38,11 @@ const Form = () => {
       />
       <div className="container-days">
         <Input
-          title="Outros prazos a serem calculados"
+          title="Outros prazos"
           type="number"
           min="1"
           max="120"
+          instruction="Insira um número de 1 a 120"
           value={days}
           onChange={(e) => setDays(e.target.value)}
         />
