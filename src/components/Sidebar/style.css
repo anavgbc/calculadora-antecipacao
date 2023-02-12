@@ -3,13 +3,13 @@
   display: flex;
   justify-content: center;
   padding: 20px;
-  color: rgb(47, 153, 182);
-  font-weight: 700;
+  color: var(--blue);
 }
 
 .sidebar-content {
   /* width: 70%; */
   width: 90%;
+  font-weight: 650;
 }
 
 .sidebar-content p,
@@ -19,7 +19,7 @@ h3 {
 }
 
 .sidebar-content h3 {
-  border-bottom: 1px solid rgb(47, 153, 182);
+  border-bottom: 1px solid var(--blue);
 }
 
 @media screen and (min-width: 768px) {

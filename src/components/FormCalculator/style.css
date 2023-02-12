@@ -15,7 +15,7 @@ form {
 form h3 {
   font-weight: 600;
   font-size: 25px;
-  color: gray;
+  color: var(--gray-2);
   margin-bottom: 10px;
 }
 
@@ -26,7 +26,6 @@ form h3 {
   align-items: center;
   justify-content: space-between;
   width: 70%;
-  /* position: relative; */
 }
 @media screen and (max-width: 480px) {
   .container-days {
@@ -35,14 +34,17 @@ form h3 {
 }
 
 #form-button {
-  background: #f3f3f3;
+  background-color: var(--gray-3);
   border: none;
   border-radius: 5px;
   height: 40px;
-  color: #9c9999;
-  /* position: absolute; */
-  /* top: 30px;
-  right: 0px; */
+  color: var(--gray-2);
+}
+
+#form-button:hover {
+  background-color: var(--gray-0);
+  color: var(--white);
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {

@@ -12,7 +12,9 @@ const Sidebar = () => {
           Object.keys(result).map((day, index) => (
             <>
               {day == 1 ? (
-                <p>Amanhã: {fixingValue()[index]}</p>
+                <p>
+                  Amanhã: <strong>{fixingValue()[index]}</strong>
+                </p>
               ) : (
                 <p>
                   Em {day} dias: {fixingValue()[index]}

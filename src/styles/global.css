@@ -1,5 +1,15 @@
 :root {
-  --color-gray: #696969;
+  --white: #ffffff;
+  --gray-0: #d7d7d7;
+  --gray-1: #9c9999;
+  --gray-2: #696969;
+  --gray-3: #f3f3f3;
+  --gray-4: rgb(100, 100, 100);
+  --gray-5: #e9e9e9;
+
+  --blue: rgb(47, 153, 182);
+
+  --span-gray: rgb(194, 194, 194);
 }
 
 html,
@@ -36,7 +46,6 @@ s,
 samp,
 small,
 strike,
-strong,
 sub,
 sup,
 tt,

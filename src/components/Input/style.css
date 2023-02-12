@@ -3,7 +3,7 @@
   flex-direction: column;
   width: 70%;
   padding-top: 10px;
-  color: rgb(100, 100, 100);
+  color: var(--gray-4);
 }
 
 @media screen and (max-width: 480px) {
@@ -13,7 +13,18 @@
 }
 
 input {
-  padding: 5px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid var(--gray-5);
+  background-color: var(--gray-3);
+}
+
+input:focus {
+  outline: none;
+}
+
+::placeholder {
+  color: var(--span-gray);
 }
 
 label {
@@ -21,6 +32,6 @@ label {
 }
 
 .container-input span {
-  color: rgb(194, 194, 194);
+  color: var(--span-gray);
   font-size: 14px;
 }

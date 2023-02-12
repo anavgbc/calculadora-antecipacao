@@ -8,10 +8,10 @@
 
 .container-home-main {
   width: 80%;
-  background-color: white;
+  background-color: var(--white);
   display: flex;
   flex-direction: column;
-  border: 1px solid rgb(186, 186, 186);
+  border: 1px solid var(--gray-0);
   border-radius: 5px;
   justify-content: space-between;
 }
