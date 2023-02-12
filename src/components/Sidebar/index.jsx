@@ -3,17 +3,30 @@ import { CalculatorContext } from "../../providers/CalculatorContext";
 import "./style.css";
 
 const Sidebar = () => {
-  const { result, fixingValue } = useContext(CalculatorContext);
-  console.log(result);
-
+  const { result, fixingValue, listDays } = useContext(CalculatorContext);
   return (
     <div className="container-sidebar">
       <div className="sidebar-content">
         <h3>VOCÊ RECEBERÁ:</h3>
-        <p>Amanhã: {fixingValue()[0]}</p>
-        <p>Em 15 dias: {fixingValue()[1]}</p>
-        <p>Em 30 dias:{fixingValue()[2]}</p>
-        <p>em 90 dias: {fixingValue()[3]}</p>
+        {result ? (
+          Object.keys(result).map((day, index) => (
+            <>
+              {day == 1 ? (
+                <p>Amanhã: {fixingValue()[index]}</p>
+              ) : (
+                <p>
+                  Em {day} dias: {fixingValue()[index]}
+                </p>
+              )}
+            </>
+          ))
+        ) : (
+          <>
+            {listDays.map((elem) => (
+              <>{elem == 1 ? <p>Amanhã:</p> : <p>Em {elem} dias:</p>}</>
+            ))}
+          </>
+        )}
       </div>
     </div>
   );

@@ -7,25 +7,10 @@ export const CalculatorContextProvider = ({ children }) => {
   const [amount, setAmount] = useState("");
   const [installments, setInstallments] = useState("");
   const [mdr, setMdr] = useState("");
-  const [days, setDays] = useState([]);
-  const [result, setResult] = useState({});
+  const [days, setDays] = useState("");
+  const [listDays, setListDays] = useState([1, 15, 30, 90]);
 
-  useEffect(() => {
-    if (installments !== "" && amount !== "" && mdr !== "") {
-      api
-        .post("", {
-          amount: parseInt(amount) * 100,
-          installments: installments,
-          mdr: mdr,
-        })
-        .then((res) => {
-          setResult(res.data);
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    }
-  }, [amount, installments, mdr]);
+  const [result, setResult] = useState(false);
 
   const fixingValue = () => {
     const values = Object.keys(result).map((item) =>
@@ -37,7 +22,24 @@ export const CalculatorContextProvider = ({ children }) => {
     return values;
   };
 
-  console.log(fixingValue());
+  useEffect(() => {
+    if (installments !== "" && amount !== "" && mdr !== "") {
+      api
+        .post("", {
+          amount: parseInt(amount) * 100,
+          installments: installments,
+          mdr: mdr,
+          days: listDays,
+        })
+        .then((res) => {
+          setResult(res.data);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
+  }, [amount, installments, mdr, listDays]);
+
   return (
     <CalculatorContext.Provider
       value={{
@@ -51,6 +53,8 @@ export const CalculatorContextProvider = ({ children }) => {
         setDays,
         result,
         fixingValue,
+        listDays,
+        setListDays,
       }}
     >
       {children}

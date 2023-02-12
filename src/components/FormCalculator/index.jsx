@@ -4,8 +4,18 @@ import Input from "../Input";
 import "./style.css";
 
 const Form = () => {
-  const { setAmount, amount, setInstallments, installments, setMdr, mdr } =
-    useContext(CalculatorContext);
+  const {
+    setAmount,
+    amount,
+    setInstallments,
+    installments,
+    setMdr,
+    mdr,
+    days,
+    setDays,
+    setListDays,
+    listDays,
+  } = useContext(CalculatorContext);
 
   return (
     <form>
@@ -26,6 +36,30 @@ const Form = () => {
         value={mdr}
         onChange={(e) => setMdr(e.target.value)}
       />
+      <div className="container-days">
+        <Input
+          title="Outros prazos a serem calculados"
+          type="number"
+          min="1"
+          max="120"
+          value={days}
+          onChange={(e) => setDays(e.target.value)}
+        />
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+            if (
+              days <= 120 &&
+              !listDays.includes(days || Number(days)) &&
+              listDays.length < 10
+            ) {
+              setListDays([...listDays, days]);
+            }
+          }}
+        >
+          +
+        </button>
+      </div>
     </form>
   );
 };

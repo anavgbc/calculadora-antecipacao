@@ -8,12 +8,14 @@
 }
 
 .sidebar-content {
-  width: 70%;
+  /* width: 70%; */
+  width: 90%;
 }
 
 .sidebar-content p,
 h3 {
   padding: 8px 0;
+  font-size: 14px;
 }
 
 .sidebar-content h3 {
