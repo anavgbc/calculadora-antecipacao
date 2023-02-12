@@ -61,7 +61,7 @@ const Form = () => {
             }
           }}
         >
-          Calcular
+          +
         </button>
       </div>
     </form>
