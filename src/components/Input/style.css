@@ -2,13 +2,22 @@
   display: flex;
   flex-direction: column;
   width: 70%;
-  padding: 20px;
+  padding-top: 10px;
   color: rgb(100, 100, 100);
 }
 
+@media screen and (max-width: 480px) {
+  .container-input {
+    width: 90%;
+  }
+}
+
 input {
-  padding: 10px;
-  width: 100%;
+  padding: 5px;
+}
+
+label {
+  margin-bottom: 10px;
 }
 
 .container-input span {

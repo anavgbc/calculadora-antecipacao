@@ -13,6 +13,7 @@
   flex-direction: column;
   border: 1px solid rgb(186, 186, 186);
   border-radius: 5px;
+  justify-content: space-between;
 }
 
 @media screen and (min-width: 768px) {
@@ -22,8 +23,14 @@
   }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (max-width: 480px) {
+  .container-home-main {
+    width: 90%;
+  }
+}
+
+/* @media screen and (min-width: 900px) {
   .container-home-main {
     width: 60%;
   }
-}
+} */

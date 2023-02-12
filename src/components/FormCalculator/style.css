@@ -6,6 +6,12 @@ form {
   padding: 20px;
 }
 
+@media screen and (max-width: 320px) {
+  form {
+    padding: 5px;
+  }
+}
+
 form h3 {
   font-weight: 600;
   font-size: 25px;
@@ -19,11 +25,24 @@ form h3 {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  width: 70%;
+  /* position: relative; */
+}
+@media screen and (max-width: 480px) {
+  .container-days {
+    width: 90%;
+  }
 }
 
-.container-days button {
-  /* width: auto; */
-  height: 30%;
+#form-button {
+  background: #f3f3f3;
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  color: #9c9999;
+  /* position: absolute; */
+  /* top: 30px;
+  right: 0px; */
 }
 
 @media screen and (min-width: 768px) {

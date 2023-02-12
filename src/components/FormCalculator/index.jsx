@@ -24,6 +24,7 @@ const Form = () => {
         title="Informe o valor da venda *"
         value={amount}
         onChange={(e) => setAmount(e.target.value)}
+        placeholder="Ex.: 1200,00"
       />
       <Input
         title="Em quantas parcelas *"
@@ -35,6 +36,7 @@ const Form = () => {
         title="Informe o percentual de MDR *"
         value={mdr}
         onChange={(e) => setMdr(e.target.value)}
+        placeholder="Ex.: 2"
       />
       <div className="container-days">
         <Input
@@ -47,6 +49,7 @@ const Form = () => {
           onChange={(e) => setDays(e.target.value)}
         />
         <button
+          id="form-button"
           onClick={(e) => {
             e.preventDefault();
             if (
@@ -58,7 +61,7 @@ const Form = () => {
             }
           }}
         >
-          +
+          Calcular
         </button>
       </div>
     </form>

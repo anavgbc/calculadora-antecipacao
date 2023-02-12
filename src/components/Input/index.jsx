@@ -7,7 +7,6 @@ const Input = ({ title, instruction, type, ...rest }) => {
         <label htmlFor="">{title}</label>
         <input type={type ? type : "text"} {...rest} />
         {instruction && <span>{instruction}</span>}
-        {/* {type === "number" && <button>+</button>} */}
       </div>
     </>
   );
